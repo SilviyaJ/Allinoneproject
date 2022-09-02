@@ -38,10 +38,10 @@ export const Create=()=>{
 
     return(
         <>
-            <div className="container mt-5" style={{backgroundColor:'beige'}}>
-                <h1 className="text-center text-primary">Add new stock</h1>
+            <div className="container mt-5">
+                <h1 className="text-center text-danger">Add new stock</h1>
                 <div className="row justify-content-center">
-                    <div className="col-lg-7 col-md-10 col-sm-12 shadow p-4" style={{backgroundColor:'lightblue',borderRadius:'20px'}}>
+                    <div className="col-lg-7 col-md-10 col-sm-12 shadow p-4" style={{backgroundColor:'lightgreen',borderRadius:'20px'}}>
                         <div className="row">
                             <label>Laptop Model</label>
                             <input value={pack.model} onChange={gather} type="text" name="model" placeholder="Model Name" className="form-control" />
