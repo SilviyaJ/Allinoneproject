@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class Lapconfigure {
 		UserDetails myUser1=User.withDefaultPasswordEncoder().username("jessy").password("black").roles("ADMIN").build();
 		UserDetails myUser2=User.withDefaultPasswordEncoder().username("karan").password("brown").roles("ADMIN").build();
 		
-		Collection<UserDetails> myusers=Stream.of(myUser1,myUser2).toList();
+		Collection<UserDetails> myusers=Stream.of(myUser1,myUser2).collect(Collectors.toList());
 		return new InMemoryUserDetailsManager(myusers);
 		
 	}
